@@ -1,0 +1,35 @@
+################ CRUD ################
+
+#Query Membuat Database
+CREATE DATABASE percobaan_crud;
+
+
+#Query Membuat Table
+CREATE TABLE karyawan (
+    id_karyawan INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nama VARCHAR(100) NOT NULL,
+    alamat VARCHAR(255) NOT NULL,
+    no_hp VARCHAR(20) NOT NULL
+);
+
+
+#Query Create (INSERT)
+INSERT INTO `karyawan`(`id_karyawan`, `nama`, `alamat`, `no_hp`) VALUES ('1','Tono','Gambir Jakarta','08123455667');
+INSERT INTO `karyawan`(`id_karyawan`, `nama`, `alamat`, `no_hp`) VALUES ('2','Soni','Pondok Gede Bekasi','08225618226');
+
+
+#Query Read (SELECT)
+SELECT `id_karyawan`, `nama`, `alamat`, `no_hp` FROM `karyawan`;
+
+
+#Query Update 
+UPDATE `karyawan` SET `nama`='Tono Sutrisno' WHERE id_karyawan='1';
+SELECT `id_karyawan`, `nama`, `alamat`, `no_hp` FROM `karyawan`;
+
+
+#Query Delete
+DELETE FROM `karyawan` WHERE id_karyawan='2';
+SELECT `id_karyawan`, `nama`, `alamat`, `no_hp` FROM `karyawan`;
+
+
+################ CRUD ################
